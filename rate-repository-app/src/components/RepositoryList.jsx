@@ -5,6 +5,9 @@ const styles = StyleSheet.create({
   separator: {
     height: 10,
   },
+  container: {
+    padding: 8,
+  }
 });
 
 const repositories = [
@@ -59,6 +62,7 @@ const ItemSeparator = () => <View style={styles.separator} />;
 const RepositoryList = () => {
   return (
     <FlatList
+      style={styles.container}
       data={repositories}
       ItemSeparatorComponent={ItemSeparator}
       renderItem={({item}) => <RepositoryItem item={item} />}
