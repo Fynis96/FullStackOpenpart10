@@ -9,6 +9,7 @@ npm-debug.*
 *.mobileprovision
 *.orig.*
 web-build/
+assets/react_native_debugger-0.13.0-setup.exe
 
 # macOS
 .DS_Store
