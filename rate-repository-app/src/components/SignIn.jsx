@@ -22,8 +22,8 @@ const styles = StyleSheet.create({
     borderWidth: 2,
     margin: 15,
     backgroundColor: '#0366d6'
-  }
-})
+  },
+});
 
 const initialValues = {
   username: "",
