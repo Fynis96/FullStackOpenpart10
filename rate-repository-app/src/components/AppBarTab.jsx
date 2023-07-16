@@ -1,5 +1,6 @@
 import Text from "./Text";
 import { Pressable, StyleSheet } from "react-native";
+import { Link } from "react-router-native";
 
 const styles = StyleSheet.create({
   flexItem: {
@@ -9,12 +10,14 @@ const styles = StyleSheet.create({
   },
 });
 
-const AppBarTab = ({text}) => {
+const AppBarTab = ({ text, route }) => {
   return (
     <Pressable style={styles.flexItem}>
-      <Text color="white" fontSize="subheading" fontWeight="bold" >
-        {text}
-      </Text>
+      <Link to={route}>
+        <Text color="white" fontSize="subheading" fontWeight="bold" >
+          {text}
+        </Text>
+      </Link>
     </Pressable>
   );
 };
