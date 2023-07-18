@@ -3,7 +3,9 @@ import { useQuery } from '@apollo/client';
 import { ALL_REPOS } from '../graphql/queries';
 
 const useRepositories = () => {
-  const { loading, error, data } = useQuery(ALL_REPOS);
+  const { loading, error, data } = useQuery(ALL_REPOS, {
+    fetchPolicy: 'cache-and-network',
+  });
   const [repositories, setRepositories] = useState();
 
   const fetchRepositories = async () => {
